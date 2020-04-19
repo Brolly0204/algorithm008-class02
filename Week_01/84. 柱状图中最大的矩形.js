@@ -10,6 +10,31 @@
 //   return maxArea
 // }
 
+// const largestRectangleArea = function(heights) {
+//   const stack = [-1]
+//   let maxArea = 0
+//   for (let i = 0, len = heights.length; i < len; i++) {
+//     while (
+//       stack[stack.length - 1] !== -1 &&
+//       heights[i] <= heights[stack[stack.length - 1]]
+//     ) {
+//       maxArea = Math.max(
+//         maxArea,
+//         heights[stack.pop()] * (i - stack[stack.length - 1] - 1)
+//       )
+//     }
+//     stack.push(i)
+//   }
+
+//   while (stack[stack.length - 1] !== -1) {
+//     maxArea = Math.max(
+//       maxArea,
+//       heights[stack.pop()] * (heights.length - stack[stack.length - 1] - 1)
+//     )
+//   }
+//   return maxArea
+// }
+
 const largestRectangleArea = function(heights) {
   const stack = [-1]
   let maxArea = 0
