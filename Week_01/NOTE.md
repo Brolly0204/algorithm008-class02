@@ -30,7 +30,39 @@ offer() | 队列中添加排队元素
 poll() | 删除队列头部元素
 peek() | 返回队列头部元素，不删除
 
-Deque 双端队列还需要自己补补
+#### Deque 改写
+
+> 用 add first 或 add last 这套新的 API 改写 Deque 的代码
+
+```java
+import java.util.Deque;
+import java.util.LinkedList;
+
+public class LeeDeque {
+  public static void main(String[] args) {
+    LeeDeque deque = new LeeDeque();
+    deque.getLeeDeque();
+  }
+
+  public Deque getLeeDeque() {
+    Deque<String> leeDeque = new LinkedList<String>();
+    leeDeque.addFirst("a");
+    leeDeque.addFirst("b");
+    leeDeque.addFirst("c");
+    System.out.println(leeDeque);
+
+    String str = leeDeque.peekFirst();
+    System.out.println(str);
+    System.out.println(leeDeque);
+
+    while (leeDeque.size() > 0) {
+      System.out.println(leeDeque.removeFirst());
+    }
+    System.out.println(leeDeque);
+    return leeDeque;
+  }
+}
+```
 
 ## 本周个人总结
 
