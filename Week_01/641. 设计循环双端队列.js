@@ -92,13 +92,9 @@ class MyCircularDeque {
     this.deque = []
   }
 
-  isUnFull() {
-    return this.deque.length < this.k
-  }
-
   // 将一个元素添加到双端队列头部。 如果操作成功返回 true。
   insertFront(x) {
-    if (this.isUnFull()) {
+    if (!this.isFull()) {
       this.deque.unshift(x)
       return true
     }
@@ -107,7 +103,7 @@ class MyCircularDeque {
 
   // 将一个元素添加到双端队列尾部。如果操作成功返回 true。
   insertLast(x) {
-    if (this.isUnFull()) {
+    if (!this.isFull()) {
       this.deque.push(x)
       return true
     }
