@@ -1,12 +1,12 @@
 // const canJump = function (nums: number[]) {
 //   if (nums.length === 0) return false
-//   let endRecord = nums.length - 1
+//   let last = nums.length - 1
 //   for (let i = nums.length - 2; i >= 0; i--) {
-//     if (i + nums[i] >= endRecord) {
-//       endRecord = i
+//     if (i + nums[i] >= last) {
+//       last = i
 //     }
 //   }
-//   return endRecord === 0
+//   return last === 0
 // }
 var canJump = function(nums) {
   var reach = 0
